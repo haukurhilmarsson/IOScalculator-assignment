@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity} from 'react-native';
-import * as Font from 'expo-font';
 
 export default class Button extends React.Component {
 

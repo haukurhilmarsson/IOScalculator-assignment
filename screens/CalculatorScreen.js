@@ -23,11 +23,11 @@ export default class CalculatorScreen extends React.Component {
             digitSize: 80
         }
 
-        //Initializing swiss calculator
+        //Initializing swiss calculator https://github.com/ericmorgan1/swisscalc-lib
         this.oc = global.swisscalc.lib.operatorCache;
         this.calc = new global.swisscalc.calc.calculator();
 
-        //Initialize pan responder for backspace swipe functionality
+        //Initialize pan responder for backspace swipe functionality https://reactnative.dev/docs/panresponder
         this.panResponder = PanResponder.create({
             onStartShouldSetPanResponder: (evt, gestureState) => true,
             onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
