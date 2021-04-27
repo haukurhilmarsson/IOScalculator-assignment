@@ -44,7 +44,7 @@ global.swisscalc.display.fixedPointDisplay.prototype.getCurrentDisplay = functio
 	}
 	
 	if (this._isNegative) str = "-" + str;
-	
+
 	return str;
 };
 

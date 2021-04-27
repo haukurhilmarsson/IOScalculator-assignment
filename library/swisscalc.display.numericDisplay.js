@@ -72,6 +72,16 @@ global.swisscalc.display.numericDisplay.prototype.getDisplayValue = function() {
 
 // Formats the value and sets the display. "val" should be a number.
 global.swisscalc.display.numericDisplay.prototype.setDisplayValue = function(val) {
+	if(val.toString().length >= 9){
+
+		this._display = val.toString().substring(0,8);
+
+	}
+	else{
+
+		this._display = val.toString();
+		
+	}
 	// TODO: May need to do some formatting/rounding...
-	this._display = val.toString();
+	//this._display = val.toString();
 };
