@@ -110,7 +110,6 @@ export default class CalculatorScreen extends React.Component {
         //Decrease fontSize of digits if number of characters in output exceed 7 but are fewer than 11
         if (outputLength > 7 && outputLength != 11){
 
-            //this.setState({ digitSize: (this.state.digitSize-13)});
             fontDecrease = ((outputLength-7)*4);
             this.setState({ digitSize: (this.state.digitSize-fontDecrease)});
 
