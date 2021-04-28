@@ -24,3 +24,6 @@ Functionality:
 The display allows a maximum of 9 digits to appear. When the amount of digits exceed 6, fontSize will decrease in order to fit more digits.
 
 If you have any questions or run into any problems then please contact me.
+
+Haukur Breki Hilmarsson
+haukurbreki@gmail.com
