@@ -20,7 +20,8 @@ export default class CalculatorScreen extends React.Component {
         //The output display on the calculator
         this.state = {
             output: "0",
-            digitSize: 80
+            digitSize: 80,
+            clearSymbol: "AC"
         }
 
         //Initializing swiss calculator https://github.com/ericmorgan1/swisscalc-lib
@@ -48,6 +49,7 @@ export default class CalculatorScreen extends React.Component {
         this.calc.addDigit(digitPressed);
         this.checkDigits();
         this.setState({ output : this.calc.getMainDisplay() });
+        this.setState({ clearSymbol: "AC"});
 
     }
 
@@ -56,6 +58,7 @@ export default class CalculatorScreen extends React.Component {
 
         this.calc.clear();
         this.setState({ output: "0"});
+        this.setState({ clearSymbol: "C"});
 
     }
 
@@ -138,7 +141,7 @@ export default class CalculatorScreen extends React.Component {
                 <View style={styles.inputContainer}>
 
                     <View style={styles.buttonContainer}>
-                        <Button  onPress= {() => {this.onClear()}} icon="AC" iconColor="black" backgroundColor="#A5A5A5"/>
+                        <Button  onPress= {() => {this.onClear()}} icon={this.state.clearSymbol} iconColor="black" backgroundColor="#A5A5A5"/>
                         <Button  onPress= {() => {this.onNegate()}} icon="+/-" iconColor="black" backgroundColor="#A5A5A5"/>
                         <Button  onPress= {() => {this.onUnaryOperator(this.oc.PercentOperator)}} icon="%" iconColor="black" backgroundColor="#A5A5A5"/>
                         <Button  onPress= {() => {this.onBinaryOperator(this.oc.DivisionOperator)}} icon="÷" iconColor="white" backgroundColor="#FE9F0A"/>
